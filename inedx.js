@@ -95,7 +95,7 @@ function calculate(value1 , operator , value2){
         return  subtraction (value1,value2);
     }
     else if (operator === "*"){
-        return  multiplication (val1,val2);
+        return  multiplication (value1,value2);
 
     }
     else if (operator === "/"){
@@ -111,7 +111,7 @@ function calculate(value1 , operator , value2){
 }
 document.write("<h1> Calculate Of Given Values  </h1>");
 
-document.write("<h2> " , value1 , " " , operator , " " ,  value2 , " = " , calculate(val1,operator,val2) , "</h2>");
+document.write("<h2> " , value1 , " " , operator , " " ,  value2 , " = " , calculate(value1,operator,value2) , "</h2>");
 
 // Question 5 ;
 
