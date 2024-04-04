@@ -95,7 +95,7 @@ function calculate(value1 , operator , value2){
         return  subtraction (value1,value2);
     }
     else if (operator === "*"){
-        return  multiplication (value1,value2);
+        return  multiplication (val1,val2);
 
     }
     else if (operator === "/"){
@@ -111,7 +111,7 @@ function calculate(value1 , operator , value2){
 }
 document.write("<h1> Calculate Of Given Values  </h1>");
 
-document.write("<h2> " , value1 , " " , operator , " " ,  value2 , " = " , calculate(value1,operator,value2) , "</h2>");
+document.write("<h2> " , value1 , " " , operator , " " ,  value2 , " = " , calculate(val1,operator,val2) , "</h2>");
 
 // Question 5 ;
 
@@ -135,7 +135,7 @@ function factorial (num){   // ,Factorial means multiplying all the positive int
     return num * factorial(num - 1);
     }
 }
-
+console.log(factorial(4));
 
 // question 7 
 
@@ -250,25 +250,32 @@ console.log(toCapitilize(sentence));
 
 // question 12 ;
 
-function checkLongestStr (findLongest){
-  let words = findLongest.split(" ");
-
-  let longestWords = [];
-  let longestLength = 0;
-
-  words.forEach(function(word){
-    let wordlength = word.length
+// solution no 1 both function work same
+function checkLongestStr(findLongest) {
+    let words = findLongest.split(" ");
   
-
-  if (wordlength >  longestLength ){
-    longestLength = wordlength
-    longestWord = [words]
-  }else if (wordLength === longestLength) {
-    // If the current word has the same length as the longest length found so far, add it to the list
-   return longestWords.push(word);
-}
-});
-}
+    let longestWords = [];
+    let longestLength = 0;
+  
+    words.forEach(function(word) {
+      let wordLength = word.length;
+  
+      if (wordLength > longestLength) {
+        longestLength = wordLength;
+        longestWords = [word];
+      } else if (wordLength === longestLength) {
+        longestWords.push(word);
+       
+      }
+    });
+  
+    return longestWords.join("");
+  }
+  
+  let findLongest = "hello and welcome to my page i will teach you javascript as easy i can";
+  console.log(checkLongestStr(findLongest));
+  
+// solution no 2 both function work same
 
 function checkTheLongest (jumla){
   senten = jumla.split(" ");
